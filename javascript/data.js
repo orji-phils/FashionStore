@@ -1,0 +1,141 @@
+// all product data
+let products = [
+    {
+        id: 1,
+        category: "Clothing",
+        audience: "Men",
+        name: "Men's T-Shirt",
+        price: 10.99,
+        description: "A comfortable and stylish t-shirt for men.",
+        image: "images/mens_tshirt.jpg"
+    },
+    {
+        id: 2,
+        category: "Clothing",
+        audience: "Women",
+        name: "Women's T-Shirt",
+        price: 10.99,
+        description: "A comfortable and stylish t-shirt for women.",
+        image: "images/womens_tshirt.jpg"
+    },
+    {
+        id: 3,
+        category: "Clothing",
+        audience: "Men",
+        name: "Men's Jeans",
+        price: 29.99,
+        description: "Classic denim jeans for men.",
+        image: "images/mens_jeans.jpg"
+    },
+    {
+        id: 4,
+        category: "Clothing",
+        audience: "Women",
+        name: "Women's Jeans",
+        price: 29.99,
+        description: "Classic denim jeans for women.",
+        image: "images/womens_jeans.jpg"
+    },
+    {
+        id: 5,
+        category: "Wrist Watch",
+        audience: "Men",
+        name: "Men's Watch",
+        price: 19.99,
+        description: "A stylish watch for men.",
+        image: "images/mens_watch.jpg"
+    },
+    {
+        id: 6,
+        category: "Wrist Watch",
+        audience: "Women",
+        name: "Women's Watch",
+        price: 19.99,
+        description: "A stylish watch for women.",
+        image: "images/womens_watch.jpg"
+    },
+    {
+        id: 7,
+        category: "Wrist Watch",
+        audience: "Unisex",
+        name: "Unisex Watch",
+        price: 19.99,
+        description: "A stylish watch for everyone.",
+        image: "images/unisex_watch.jpg"
+    },
+    {
+        id: 8,
+        category: "Wrist Watch",
+        audience: "Unisex",
+        name: "Unisex Watch",
+        price: 19.99,
+        description: "A stylish watch for everyone.",
+        image: "images/unisex_watch.jpg"
+    },
+    {
+        id: 9,
+        category: "Shoe",
+        audience: "Men",
+        name: "Men's Sneakers",
+        price: 49.99,
+        description: "Comfortable and stylish sneakers for men.",
+        image: "images/mens_sneakers.jpg"
+    },
+    {
+        id: 10,
+        category: "Shoe",
+        audience: "Women",
+        name: "Women's Sneakers",
+        price: 49.99,
+        description: "Comfortable and stylish sneakers for women.",
+        image: "images/womens_sneakers.jpg"
+    },
+    {
+        id: 11,
+        category: "Shoe",
+        audience: "Men",
+        name: "Men's Boots",
+        price: 79.99,
+        description: "Durable and stylish boots for men.",
+        image: "images/mens_boots.jpg"
+    },
+    {
+        id: 12,
+        category: "Shoe",
+        audience: "Women",
+        name: "Women's Boots",
+        price: 79.99,
+        description: "Durable and stylish boots for women.",
+        image: "images/womens_boots.jpg"
+    },
+    {
+        id: 13,
+        category: "Bag",
+        audience: "Men",
+        name: "Men's Backpack",
+        price: 29.99,
+        description: "A spacious and durable backpack for men.",
+        image: "images/mens_backpack.jpg"
+    },
+    {
+        id: 14,
+        category: "Bag",
+        audience: "Women",
+        name: "Women's Handbag",
+        price: 39.99,
+        description: "A stylish handbag for women.",
+        image: "images/womens_handbag.jpg"
+    },
+    {
+        id: 15,
+        category: "Bag",
+        audience: "Unisex",
+        name: "Unisex Tote Bag",
+        price: 24.99,
+        description: "A versatile tote bag for everyone.",
+        image: "images/unisex_tote_bag.jpg"
+    }
+];
+
+// export the products array for use in other files
+export { products };

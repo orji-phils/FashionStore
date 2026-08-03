@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Style Lagos offers quality fashion including clothing, shoes, bags, and wristwatches.">
+    <title>Checkout | Style Lagos</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../javascript/ui.js"></script>
+    <!-- <script type="module" src="../javascript/cart.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Style Lagos Logo">
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Link to Cart -->
+        <div class="cart">
+            <a href="cart.html">
+                Cart <span class="cart-count" aria-live="polite">0</span>
+
+                <div class="total" aria-live="polite">
+                    <span class="total-label">Total: </span>
+                    <span class="total-amount">0.00</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-page">
+            <div class="page-intro">
+                <span class="eyebrow">Finish your order</span>
+                <h1>Checkout</h1>
+                <p>Complete your purchase by filling out the information below and we’ll take care of the rest.</p>
+            </div>
+
+            <form class="checkout-form" name="myForm">
+                <!-- Customer information -->
+                <fieldset id="customer-information">
+                    <legend>Customer Information</legend>
+
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (optional)</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    </div>
+                </fieldset>
+
+                <!-- delivery Method -->
+                <fieldset id="delivery-method">
+                    <legend>Delivery Method</legend>
+
+                    <div class="form-group">
+                        <label for="delivery-type">How would you want to receive your order?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="delivery" name="deliveryType" value="delivery" required>
+                                <label for="delivery">Deliver to me</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" id="pickup" name="deliveryType" value="pickup" required>
+                                <label for="pickup">I'll pick it up</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Delivery Address -->
+                <fieldset id="delivery-address" aria-live="polite">
+                    <legend id="delivery-header">Delivery Address</legend>
+
+                    <div id="delivery-address-fields">
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="streetAddress" placeholder="Enter your street address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nearest-landmark">Nearest Landmark</label>
+                            <input type="text" id="nearest-landmark" name="nearestLandmark" placeholder="Enter the nearest landmark">
+                        </div>
+                    </div>
+
+                    <!-- pickup location -->
+                     <article id="pickup-location" aria-live="polite">
+                        <h3>Pickup Location</h3>
+                        <p>You can pick up your order at our store located at:</p>
+                        <address>
+                            Style Lagos Store<br>
+                            123 Fashion Street<br>
+                            Lagos, Nigeria
+                        </address>
+
+                        <h3>Store Hours:</h3>
+                        <ul>
+                            <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                            <li>Saturday: 10:00 AM - 4:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </article>
+                </fieldset>
+
+                <!-- Order Summary -->
+                <fieldset id="order-summary" aria-live="polite">
+                    <legend>Order Summary</legend>
+
+                    <ul class="order-items">
+                        <!-- Order items will be dynamically added here -->
+                    </ul>
+                    <hr>
+
+                    <div class="order-total">
+                        <strong>Total: <span id="order-total-amount">0.00</span></strong>
+                    </div>
+                </fieldset>
+
+                <!-- confirm purchase -->
+                <div class="confirm-purchase">
+                    <input type="checkbox" id="confirm-order" required>
+                    <label for="confirm-order">I confirm that the information above is correct.</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" onclick="">Send Order via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <nav class="footer-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+            <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <p>&copy; 2026 Style Lagos. All rights reserved.</p>
+    </footer>
+</body>
+</html>

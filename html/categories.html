@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Style Lagos offers quality fashion including clothing, shoes, bags, and wristwatches.">
+    <title>Categories | Style Lagos</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../javascript/ui.js"></script>
+    <!-- <script type="module" src="../javascript/cart.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Style Lagos Logo">
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Link to Cart -->
+        <div class="cart">
+            <a href="cart.html">
+                Cart <span class="cart-count" aria-live="polite">0</span>
+
+                <div class="total" aria-live="polite">
+                    <span class="total-label">Total: </span>
+                    <span class="total-amount">0.00</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="categories-page">
+            <div class="page-intro">
+                <span class="eyebrow">Discover</span>
+                <h1>Browse Categories</h1>
+                <p>Select a category to view available products and find your next signature piece.</p>
+            </div>
+
+            <div class="category-grid" aria-label="Available Categories">
+                <!-- Categories will be dynamically added here -->
+            </div>
+        </section>
+
+        <article class="empty-categories">
+            <h2>No Categories Available</h2>
+            <p>Currently, there are no categories to display.</p>
+            <p>Please check back later for our latest fashion collections.</p>
+        </article>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <nav class="footer-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+            <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <p>&copy; 2026 Style Lagos. All rights reserved.</p>
+    </footer>
+</body>
+</html>

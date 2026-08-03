@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Style Lagos offers quality fashion including clothing, shoes, bags, and wristwatches.">
+    <title>Style Lagos</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../javascript/ui.js"></script>
+    <!-- <script type="module" src="../javascript/cart.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Style Lagos Logo">
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Link to Cart -->
+        <div class="cart">
+            <a href="cart.html">
+                Cart <span class="cart-count" aria-live="polite">0</span>
+
+                <div class="total" aria-live="polite">
+                    <span class="total-label">Total: </span>
+                    <span class="total-amount">0.00</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">New season • curated essentials</span>
+                <h1>Elevate your style with fashion that speaks for you.</h1>
+                <p>Your one-stop destination for the latest fashion trends and styles.</p>
+                <p>High-quality clothing, shoes, bags, and watches for everyone.</p>
+                <div class="hero-actions">
+                    <a href="categories.html" class="shop-now">Shop Now</a>
+                    <a href="#categories" class="secondary-link">Explore Collections</a>
+                </div>
+            </div>
+
+            <div class="hero-panel" aria-label="Store highlights">
+                <div class="hero-stat">
+                    <strong>100+</strong>
+                    <span>handpicked products</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>4.9/5</strong>
+                    <span>customer satisfaction</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>24/7</strong>
+                    <span>friendly support</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="categories">
+            <div class="section-heading">
+                <span class="eyebrow">Collections</span>
+                <h2>Browse By Category</h2>
+                <p>Find the fashion you love. Choose a category below to explore our collection.</p>
+            </div>
+
+            <div class="category-grid">
+                <!-- JavaScript adds category cards here -->
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="section-heading">
+                <span class="eyebrow">Best sellers</span>
+                <h2>Featured Products</h2>
+            </div>
+            <div class="product-grid">
+                <!-- JavaScript adds products here -->
+            </div>
+        </section>
+
+        <section class="purpose">
+            <div class="section-heading">
+                <span class="eyebrow">Why choose us</span>
+                <h2>Why Shop With Us?</h2>
+            </div>
+
+            <div class="benefit-grid">
+                <article class="benefit-card">
+                    <h3>Premium Quality</h3>
+                    <p>Curated pieces that balance comfort, durability, and style.</p>
+                </article>
+                <article class="benefit-card">
+                    <h3>Affordable Prices</h3>
+                    <p>Modern fashion that fits your budget without compromising on quality.</p>
+                </article>
+                <article class="benefit-card">
+                    <h3>Fast Delivery</h3>
+                    <p>Reliable service that brings your favourites to your doorstep quickly.</p>
+                </article>
+                <article class="benefit-card">
+                    <h3>Friendly Service</h3>
+                    <p>A warm support team ready to assist you with every order.</p>
+                </article>
+            </div>
+
+            <p class="purpose-summary">At Style Lagos, we are committed to providing our customers with the best shopping experience possible. We strive to offer high-quality products at affordable prices, while also ensuring that our customers receive excellent customer service.</p>
+        </section>
+
+        <section class="reviews">
+            <div class="section-heading">
+                <span class="eyebrow">Testimonials</span>
+                <h2>Customer Reviews</h2>
+            </div>
+
+            <div class="review-grid">
+                <article class="review">
+                    <p>"I love shopping at Style Lagos! The products are always high quality and the prices are unbeatable."</p>
+                    <p class="reviewer">- Jane Doe</p>
+                </article>
+
+                <article class="review">
+                    <p>"The customer service at Style Lagos is top-notch. They always go above and beyond to help me with any questions or concerns."</p>
+                    <p class="reviewer">- John Smith</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact-card">
+                <div class="section-heading">
+                    <span class="eyebrow">Visit us</span>
+                    <h2>Contact Us</h2>
+                </div>
+                <p>Visit our store at</p>
+                <address>
+                    123 Fashion Street, <br>
+                    Lagos, Nigeria.
+                </address>
+
+                <ul class="contact-list">
+                    <li>Call us at <a href="tel:+2349133211565">+234 913 321 1565</a></li>
+                    <li>Send us a message on whatsapp at <a href="https://wa.me/2349133211565" target="_blank">WhatsApp</a></li>
+                </ul>
+
+                <p>If you have any questions or concerns, please don't hesitate to reach out to us. We are always happy to help!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <nav class="footer-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <p>&copy; 2026 Style Lagos. All rights reserved.</p>
+    </footer>
+</body>
+</html>

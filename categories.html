@@ -6,11 +6,11 @@
     <meta
     name="description"
     content="Style Lagos offers quality fashion including clothing, shoes, bags, and wristwatches.">
-    <title>Products | Style Lagos</title>
+    <title>Categories | Style Lagos</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <script type="module" src="../javascript/ui.js"></script>
-    <!-- <script type="module" src="../javascript/cart.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="javascript/ui.js"></script>
+    <script type="module" src="javascript/cart.js"></script>
 </head>
 <body>
     <header>
@@ -41,22 +41,23 @@
     </header>
 
     <main>
-        <section class="products-page">
+        <section class="categories-page">
             <div class="page-intro">
-                <span class="eyebrow">Curated edit</span>
-                <h1 class="product-category">Luxury Collection</h1>
-                <p id="short-description">Discover refined pieces crafted for modern style, comfort, and timeless presence.</p>
+                <span class="eyebrow">Discover</span>
+                <h1>Browse Categories</h1>
+                <p>Select a category to view available products and find your next signature piece.</p>
             </div>
 
-            <div class="product-grid" aria-label="Available Products">
-                <!-- JavaScript adds products here -->
-                <div class="empty-state">
-                    <h2>No Products Available</h2>
-                    <p>Currently, there are no products to display in this category.</p>
-                    <p>Please check back later for our latest fashion collections.</p>
-                </div>
+            <div class="category-grid" aria-label="Available Categories">
+                <!-- Categories will be dynamically added here -->
             </div>
         </section>
+
+        <article class="empty-categories">
+            <h2>No Categories Available</h2>
+            <p>Currently, there are no categories to display.</p>
+            <p>Please check back later for our latest fashion collections.</p>
+        </article>
     </main>
 
     <!-- footer section -->

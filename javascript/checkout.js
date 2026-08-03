@@ -55,7 +55,6 @@ form.addEventListener("change", () => {
         form.streetAddress.required = false;
         form.city.required = false;
         pickupLocation.style.display = "block";
-        console.log("Pickup selected. Delivery address fields are not required.");
     } else {
         pickupLocation.style.display = "none";
     }

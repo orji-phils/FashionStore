@@ -1,5 +1,6 @@
 // cart functionalities
 export const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const quantity = 1;
 
 // function to add new product to cart
 export const addToCart = (product) => {
@@ -8,9 +9,12 @@ export const addToCart = (product) => {
 }
 
 // function to remove a product from cart
-export const removeFromCart = (index) => {
-    cart.splice(index, 1);
-    refreshCart();
+export const removeFromCart = (id) => {
+    const index = cart.findIndex(product => product.id === id);
+    if (index !== -1) {
+        cart.splice(index, 1);
+        refreshCart();
+    }
 }
 
 // function to calculate cart item's price
@@ -39,6 +43,8 @@ export const formatCurrencyAmount = (amount) => {
 // function to refresh the cart display
 export const refreshCart = () => {
     showCartCount();
+    document.querySelector(".total-amount").textContent =
+    formatCurrencyAmount(calculateTotalPrice());
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 

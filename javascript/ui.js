@@ -114,7 +114,7 @@ const showHomeCategories = () => {
 }
 
 // display the order summary
-const showCartSummary = () => {
+export const showCartSummary = () => {
     if (!cart) return;
 
     const orderSummary = document.querySelector(".order-summary");

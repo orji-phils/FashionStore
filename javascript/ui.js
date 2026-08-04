@@ -108,7 +108,7 @@ const showHomeCategories = () => {
                 <img src="${filtered[0].image}" alt="${filtered[0].name}">
                 <h3>${filtered[0].name}</h3>
                 <p>${filtered[0].description}</p>
-                <a href="../html/products.html?${params.toString()}">View Products</a>
+                <a href="products.html?${params.toString()}">View Products</a>
             </div>
         `;
     }

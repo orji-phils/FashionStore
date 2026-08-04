@@ -18,6 +18,7 @@ export const showCart = () => {
             <h3 class="product-name">${product.name}</h3>
             <p class="product-description">${product.description}</p>
             <p class="price">${formatCurrencyAmount(product.price)}</p>
+            <p>Quantity: ${product.quantity}</p>
             <button class="remove-btn">Remove from Cart</button>
         `;
 
@@ -123,6 +124,10 @@ export const showCartSummary = () => {
     <p>Items in your cart:</p>
         <ul>
             <li><strong>Items: ${cart.length}</strong></li>
+            <li><strong>Items List:</strong></li>
+            <ol>
+                ${cart.map(item => `<li>${item.name} x ${item.quantity} - ${formatCurrencyAmount(item.price * item.quantity)}</li>`).join('')}
+            </ol>
             <li><strong>Subtotal: ${formatCurrencyAmount(calculateTotalPrice())}</strong></li>
             <li><strong>Delivery: Calculated at checkout.</strong></li>
             </ul>
@@ -142,8 +147,9 @@ const showCheckoutSummary = () => {
 
     checkoutSummary.innerHTML = `
             <li><strong>Items: ${cart.length}</strong></li>
+            <li><strong>Items List:</strong></li>
             <ol>
-                ${cart.map(item => `<li>${item.name} - ${formatCurrencyAmount(item.price)}</li>`).join('')}
+                ${cart.map(item => `<li>${item.name} x ${item.quantity} - ${formatCurrencyAmount(item.price * item.quantity)}</li>`).join('')}
             </ol>
             <li><strong>Delivery: ${formatCurrencyAmount(deliveryFee)}</strong></li>
     `;

@@ -1,26 +1,39 @@
 // cart functionalities
 export const cart = JSON.parse(localStorage.getItem("cart")) || [];
-const quantity = 1;
 
 // function to add new product to cart
 export const addToCart = (product) => {
-    cart.push(product);
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+
     refreshCart();
 }
 
 // function to remove a product from cart
 export const removeFromCart = (id) => {
     const index = cart.findIndex(product => product.id === id);
-    if (index !== -1) {
+
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    } else {
         cart.splice(index, 1);
-        refreshCart();
     }
+
+    refreshCart();
 }
 
 // function to calculate cart item's price
 export const calculateTotalPrice = () => {
     const calculatedAmount = cart.reduce((sum, product) => {
-        return sum + product.price;
+        return sum + (product.price * product.quantity);
     }, 0);
 
     return calculatedAmount;
@@ -47,7 +60,3 @@ export const refreshCart = () => {
     formatCurrencyAmount(calculateTotalPrice());
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".total-amount").textContent = formatCurrencyAmount(calculateTotalPrice());
-});

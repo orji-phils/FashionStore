@@ -24,7 +24,7 @@ const prepareOrderSummary = (order) => {
     }
     message += `Order Items:\n`;
     items.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} - ${formatCurrencyAmount(item.price)}\n`;
+        message += `${index + 1}. ${item.name} x ${item.quantity} - ${formatCurrencyAmount(item.price * item.quantity)}\n`;
     });
     message += `\nTotal Price: ${formatCurrencyAmount(totalPrice)}\n\n`;
     message += `Thank you!`;

@@ -22,6 +22,7 @@
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -41,8 +42,67 @@
     </header>
 
     <main>
+        <form name="search-form">
+            <!-- search box area -->
+            <div class="search-box">
+                <input type="search" id="search-input" name="name" placeholder="Search products...">
+                <button id="search-button">Search</button>
+            </div>
 
+            <!-- filter section -->
+            <div class="filter-section">
+                <h2>Filter Products</h2>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="price-filter">Price Range</label>
+                        <select id="price-filter" name="price">
+                            <option value="">All Prices</option>
+                            <option value="10.99">Under ₦5,000</option>
+                            <option value="medium">₦5,000 - ₦10,000</option>
+                            <option value="high">Over ₦10,000</option>
+                        </select>
+                    </div>
 
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter" name="category">
+                            <option value="">All Categories</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Shoe">Shoes</option>
+                            <option value="Bag">Bags</option>
+                            <option value="Wrist Watche">Wristwatches</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group gender-group">
+                        <label>Filter By Gender</label>
+                        <div class="radio-options">
+                            <label class="radio-option"><input type="radio" name="audience" value="" checked> All</label>
+                            <label class="radio-option"><input type="radio" name="audience" value="Men"> Men</label>
+                            <label class="radio-option"><input type="radio" name="audience" value="Women"> Women</label>
+                            <label class="radio-option"><input type="radio" name="audience" value="Unisex"> Unisex</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort By</label>
+                        <select id="sort-filter" name="sort">
+                            <option value="">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- search or filter result -->
+         <div class="result-count">
+            <p id="product-count"></p>
+         </div>
+        
         <section class="products-page">
             <div class="page-intro">
                 <span class="eyebrow">Curated edit</span>

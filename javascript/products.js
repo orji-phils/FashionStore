@@ -5,7 +5,12 @@ import { products } from './data.js';
 export const filterProducts = (filters) => {
     return products.filter(product => {
         for (const key in filters) {
-            // console.log("The key is:", key, "The value is:", filters[key]);
+            if (filters[key] === "") continue; // Skip empty filters
+
+            if (key === "name" && !product[key].toLowerCase().includes(filters[key].toLowerCase())) {
+                return false;
+            }
+
             if (filters[key] !== product[key]) {
                 return false;
             }

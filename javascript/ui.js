@@ -3,6 +3,59 @@ import { addToCart, calculateTotalPrice, cart, formatCurrencyAmount, refreshCart
 import { products } from "./data.js";
 import { filterProducts } from "./products.js";
 
+// get the search and filter queries
+const form = document.forms["search-form"]
+
+// function to get search or filtered results
+const getFilters = () => {
+    const formData = new FormData(form);
+    const query = Object.fromEntries(formData.entries());
+    const { sort, ...filters } = query; // Destructure to separate sort from filters
+
+    const productsFiltered = filterProducts(filters);
+
+    const counter = productsFiltered.length;
+    const productCount = document.querySelector("#product-count");
+        productCount.textContent = `Found ${counter} ${counter === 1 ? 'product' : 'products'} matching your search.`;
+
+    return productsFiltered;
+}
+
+// function to get products from URL search parameters
+const getSearchQuery = () => {
+    const params = new URLSearchParams(window.location.search);
+    const result = Object.fromEntries(params.entries());
+
+    return filterProducts(result);
+};
+
+// Function to display products
+const displayProducts = (productsList) => {
+    const productGrid = document.querySelector(".product-grid");
+    productGrid.innerHTML = '';
+
+    productsList.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('product');
+
+        productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3 class="product-name">${product.name}</h3>
+            <p class="product-description">${product.description}</p>
+            <p class="price">${formatCurrencyAmount(product.price)}</p>
+            <p>In Stock</p>
+            <button class="add-btn">Add to Cart</button>
+        `;
+
+        const button = productElement.querySelector(".add-btn");
+        button.addEventListener("click", () => {
+        addToCart(product);
+    });
+
+        productGrid.appendChild(productElement);
+    });
+};
+
 // function to display cart items
 export const showCart = () => {
     const cartProducts = document.querySelector(".cart-grid");
@@ -30,45 +83,6 @@ export const showCart = () => {
         cartProducts.appendChild(productElement);
     });
 }
-
-// Function to display products
-const displayProducts = () => {
-    const productGrid = document.querySelector(".product-grid");
-    productGrid.innerHTML = '';
-
-    const params = new URLSearchParams(window.location.search);
-    const filters = Object.fromEntries(params.entries());
-    const filtered = filterProducts(filters);
-    const result = filtered.length > 0 ? filtered : products;
-    const productItems = filtered.length > 0 ? 6 : filtered.length;
-
-    const headerData = document.querySelector(".product-category");
-    if (headerData && result.length > 0) {
-        headerData.innerHTML =  `${result[0].audience} ${result[0].category}s`;
-    }
-
-    for (let i = 0; i < productItems; i++) {
-        const product = result[i];
-        const productElement = document.createElement('div');
-        productElement.classList.add('product');
-
-        productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3 class="product-name">${product.name}</h3>
-            <p class="product-description">${product.description}</p>
-            <p class="price">${formatCurrencyAmount(product.price)}</p>
-            <p>In Stock</p>
-            <button class="add-btn">Add to Cart</button>
-        `;
-
-        const button = productElement.querySelector(".add-btn");
-        button.addEventListener("click", () => {
-        addToCart(product);
-    });
-
-        productGrid.appendChild(productElement);
-    };
-};
 
 // function to show selected products 
 const showSelectedProducts = (selectedProducts) => {
@@ -159,7 +173,8 @@ const showCheckoutSummary = () => {
 }
 
 // Call the function to display products on page load
-document.addEventListener('DOMContentLoaded', displayProducts);
+document.addEventListener("DOMContentLoaded", () => displayProducts(getSearchQuery()));
+document.addEventListener("change", () => displayProducts(getFilters()));
 document.addEventListener("DOMContentLoaded", showHomeCategories);
 document.addEventListener("DOMContentLoaded", showCart);
 document.addEventListener("DOMContentLoaded", refreshCart);

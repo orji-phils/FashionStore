@@ -67,5 +67,6 @@ form.addEventListener("submit", (event) => {
 
     updateOrder();
     sendOrderViaWhatsApp(order);
+    cart = localStorage.clear();
     alert("Your order has been submitted successfully!");
 });

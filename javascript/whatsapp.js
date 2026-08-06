@@ -36,5 +36,7 @@ const prepareOrderSummary = (order) => {
 export const sendOrderViaWhatsApp = (order) => {
     const phoneNumber = "+2349133211565";
     const message = prepareOrderSummary(order);
+
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    cart = localStorage.clear();
 };

@@ -7,7 +7,7 @@ let products = [
         name: "Men's T-Shirt",
         price: 10.99,
         description: "A comfortable and stylish t-shirt for men.",
-        image: "images/mens_tshirt.jpg"
+        image: "../images/clothes/Men_black_tshirt.png"
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ let products = [
         name: "Women's T-Shirt",
         price: 10.99,
         description: "A comfortable and stylish t-shirt for women.",
-        image: "images/womens_tshirt.jpg"
+        image: "../images/clothes/women_pink_tshirt.png"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ let products = [
         name: "Men's Jeans",
         price: 29.99,
         description: "Classic denim jeans for men.",
-        image: "images/mens_jeans.jpg"
+        image: "../images/clothes/Men_denim_jean.png"
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ let products = [
         name: "Women's Jeans",
         price: 29.99,
         description: "Classic denim jeans for women.",
-        image: "images/womens_jeans.jpg"
+        image: "../images/clothes/women_denim_jean.png"
     },
     {
         id: 5,

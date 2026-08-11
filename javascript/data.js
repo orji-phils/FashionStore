@@ -43,7 +43,7 @@ let products = [
         name: "Men's Watch",
         price: 19.99,
         description: "A stylish watch for men.",
-        image: "images/mens_watch.jpg"
+        image: "../images/watches/men_wristwatch.png"
     },
     {
         id: 6,
@@ -52,7 +52,7 @@ let products = [
         name: "Women's Watch",
         price: 19.99,
         description: "A stylish watch for women.",
-        image: "images/womens_watch.jpg"
+        image: "../images/watches/women_wristwatch.png"
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ let products = [
         name: "Unisex Watch",
         price: 19.99,
         description: "A stylish watch for everyone.",
-        image: "images/unisex_watch.jpg"
+        image: "../images/watches/unisex_wristwatch.png"
     },
     {
         id: 8,
@@ -70,7 +70,7 @@ let products = [
         name: "Unisex Watch",
         price: 19.99,
         description: "A stylish watch for everyone.",
-        image: "images/unisex_watch.jpg"
+        image: "../images/watches/unisex_watch.png"
     },
     {
         id: 9,
@@ -79,7 +79,7 @@ let products = [
         name: "Men's Sneakers",
         price: 49.99,
         description: "Comfortable and stylish sneakers for men.",
-        image: "images/mens_sneakers.jpg"
+        image: "../images/shoes/men_sneakers.png"
     },
     {
         id: 10,
@@ -88,7 +88,7 @@ let products = [
         name: "Women's Sneakers",
         price: 49.99,
         description: "Comfortable and stylish sneakers for women.",
-        image: "images/womens_sneakers.jpg"
+        image: "../images/shoes/women_sneakers.png"
     },
     {
         id: 11,
@@ -97,7 +97,7 @@ let products = [
         name: "Men's Boots",
         price: 79.99,
         description: "Durable and stylish boots for men.",
-        image: "images/mens_boots.jpg"
+        image: "../images/shoes/men_boot.png"
     },
     {
         id: 12,
@@ -106,7 +106,7 @@ let products = [
         name: "Women's Boots",
         price: 79.99,
         description: "Durable and stylish boots for women.",
-        image: "images/womens_boots.jpg"
+        image: "../images/shoes/women_boot.png"
     },
     {
         id: 13,
@@ -115,7 +115,7 @@ let products = [
         name: "Men's Backpack",
         price: 29.99,
         description: "A spacious and durable backpack for men.",
-        image: "images/mens_backpack.jpg"
+        image: "../images/bags/men_backpack.png"
     },
     {
         id: 14,
@@ -124,7 +124,7 @@ let products = [
         name: "Women's Handbag",
         price: 39.99,
         description: "A stylish handbag for women.",
-        image: "images/womens_handbag.jpg"
+        image: "../images/bags/women_handbag.png"
     },
     {
         id: 15,
@@ -133,7 +133,7 @@ let products = [
         name: "Unisex Tote Bag",
         price: 24.99,
         description: "A versatile tote bag for everyone.",
-        image: "images/unisex_tote_bag.jpg"
+        image: "../images/bags/unisex_totebag.png"
     }
 ];
 
